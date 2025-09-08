@@ -1,4 +1,4 @@
-def interprete():
+def interprete(x = int) -> str:
     """
     Función que interpreta comandos simples del usuario.
     :arg:

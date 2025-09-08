@@ -1,5 +1,5 @@
 import random
-def ahorcado():
+def Ahorcados():
     """Juego del Ahorcado donde el jugador debe adivinar una palabra letra por letra.
     :arg:
     palabras (list): Lista de palabras posibles.
@@ -44,4 +44,4 @@ def ahorcado():
         print(f"\nHas perdido. La palabra era: {palabra}")
 
 if __name__ == "__main__":
-    ahorcado()
+    Ahorcados()

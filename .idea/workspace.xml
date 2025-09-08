@@ -1,15 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5969a0eb-8b34-4c50-a0af-3e574fd8f08b" name="Changes" comment="" />
+    <list default="true" id="5969a0eb-8b34-4c50-a0af-3e574fd8f08b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/_init_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_ahorcado.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_aventura.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_clasificador_num.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_comandos_simple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_combinador_listas_zip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_filtrado_datos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_lanzar_dados.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_matriz.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_naval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_posiciones_enum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_rock_paper_sccisors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_transformación_datos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_val_contra.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_validar_cc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Yami_M2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Yami_M2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10.Transposicion_matriz.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transposicion_matriz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11.Validar_cc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Validar_cc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12.Lanzar_dados.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lanzar_dados.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/13.Aventura.py" beforeDir="false" afterPath="$PROJECT_DIR$/Aventura.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/14.Ahorcado.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ahorcado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15.Naval.py" beforeDir="false" afterPath="$PROJECT_DIR$/Naval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.Comandos_simple.py" beforeDir="false" afterPath="$PROJECT_DIR$/Comandos_simple.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.Val_contra.py" beforeDir="false" afterPath="$PROJECT_DIR$/Val_contra.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4.Rock_paper-sccisors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rock_paper_scissors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5.Clasificador_num.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clasificador_num.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.Posiciones_enum.py" beforeDir="false" afterPath="$PROJECT_DIR$/Posiciones_enum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7.Combinador_de_listas_con_zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/Combinador_de_listas_con_zip.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8.Filtrado_datos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Filtrado_datos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9.Transformacion_datos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformacion_datos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_sis_cine.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_sis_cine.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Yamisipq&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Yamisipq/Yami_M2.git&quot;,
+    &quot;accountId&quot;: &quot;1ace5eca-c289-4002-9ccf-5025a8b131c7&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="32OA4BvxHm017eVdWQzRpDnvPmX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -18,11 +77,30 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests in test_ahorcado.py.executor": "Run",
+    "Python tests.Python tests in test_clasificador_num.py.executor": "Run",
+    "Python tests.Python tests in test_comandos_simple.py.executor": "Run",
+    "Python tests.Python tests in test_posiciones_enum.py.executor": "Run",
+    "Python tests.Python tests in test_rock_paper_sccisors.py.executor": "Run",
+    "Python tests.Python tests in test_sis_cine.py.executor": "Run",
+    "Python tests.Python tests in test_val_contra.py.executor": "Run",
+    "Python.Ahorcado.executor": "Run",
+    "Python.Clasificador_num.executor": "Run",
+    "Python.Posiciones_enum.executor": "Run",
+    "Python.Rock_paper_scissors.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rosas\OneDrive\Escritorio\Yami_M2" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
