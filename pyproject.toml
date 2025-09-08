@@ -3,4 +3,38 @@ name = "yami-m2"
 version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.13"
-dependencies = ["pytest>=7.4.0"]
+
+dependencies = [
+    "notebook>=7.4.5",
+    "pytest>=7.4.0",
+    "pytest-mock>=3.15.0",
+    "rich>=14.1.0",
+]
+[project.urls]
+homepage = "https://github.com/DaomPythonProjects/Modulo_2"
+repository = "https://github.com/DaomPythonProjects/Modulo_2"
+documentation = "https://github.com/DaomPythonProjects/Modulo_2/wiki"
+
+[tool.pytest.ini_options]
+# Directorios de búsqueda de pruebas. Por defecto es el directorio actual.
+# Aquí se especifica que solo busque en el directorio 'tests'.
+testpaths = "tests"
+
+# Opciones de verbosidad (más detalles en la salida).
+addopts = "-v"
+
+# Ignora directorios específicos.
+# Por ejemplo, si usas entornos virtuales dentro del proyecto.
+norecursedirs = [
+    ".git",
+    "venv",
+    ".venv"
+]
+
+# Puedes definir tus propios marcadores para agrupar pruebas.
+# Útil para ejecutar solo un subconjunto de pruebas.
+# Por ejemplo, `pytest -m "slow"` para ejecutar solo las pruebas lentas.
+markers = [
+    "slow: marca las pruebas que tardan mucho en ejecutarse",
+    "integration: marca las pruebas de integración"
+]

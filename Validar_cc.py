@@ -1,31 +1,26 @@
 def validar_cedula(cedula):
     """
-    Función para validar una cédula.
+    Valida una cédula, devolviendo un booleano y un mensaje.
+    """
+    if not isinstance(cedula, str) or not cedula.isdigit():
+        return False, "Error: La cédula debe contener solo números."
 
-        """
-    if not cedula.isdigit():
-        print("Error: La cédula debe contener solo números.")
-        return False
-    suma = 0
-    for digito in cedula:
-        suma += int(digito)
-    if suma < 10:
-        print("la cedula debe tener 10 numeros")
-        return False
+    # La validación de la suma es incorrecta para la longitud.
+    # Se corrige para validar directamente la longitud de la cadena.
+    if len(cedula) != 10:
+        return False, "Error: La cédula debe tener 10 números."
 
+    suma = sum(int(digito) for digito in cedula)
     if suma % 2 == 0:
-        return True
+        return True, "Cédula válida"
     else:
-        print(" Cédula inválida: la suma de los dígitos no es par.")
-        return False
+        return False, "Cédula inválida: la suma de los dígitos no es par."
 
-while True:
-    cedula_usuario = input("Ingrese su cédula: ")
-    if validar_cedula(cedula_usuario):
-        print("Cédula válida")
-        break
 
-def main():
-    validar_cedula(cedula_usuario)
-if __name__ == "_main_":
-    main()
+if __name__ == "__main__":
+    while True:
+        cedula_usuario = input("Ingrese su cédula: ")
+        es_valida, mensaje = validar_cedula(cedula_usuario)
+        print(mensaje)
+        if es_valida:
+            break

@@ -1,8 +1,7 @@
-def list() -> None:
+def list(numeros=None):
     """
     Demuestra el uso de list comprehensions para filtrar datos.
     """
-    numeros = [-5, 10, -15, 20, -25, 30]
 
     # Filtrar números pares usando list comprehension
     posi = [num for num in numeros if num > 0]
@@ -14,4 +13,4 @@ def list() -> None:
     print("Clasificación de números:", clasificacion)
 
 if __name__ == "__main__":
-    list()
+    list(numeros = [-5, 10, -15, 20, -25, 30])

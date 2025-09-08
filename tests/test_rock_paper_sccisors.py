@@ -1,7 +1,6 @@
 import pytest
 from Rock_paper_scissors import determinar_ganador
 
-# --- Pruebas para la función determinar_ganador ---
 
 def test_empate():
     """Prueba que un empate devuelve 0."""
