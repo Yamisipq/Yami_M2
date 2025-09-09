@@ -1,70 +1,55 @@
-habitacion_actual = "salón principal"
-tiene_collar = False
-juego_terminado = False
-
-habitaciones = {
-    "salón principal": "logica_salon_principal",
-    "biblioteca": "logica_biblioteca",
-    "estudio del hechicero": "logica_estudio"
-}
-
-
-def logica_salon_principal():
-    """Maneja la lógica de la habitación 'salón principal'."""
-    global habitacion_actual
-    print(
-        "Estás en un enorme salón principal. Hay dos puertas: una al norte y otra al este. También ves un viejo cofre en el centro.")
-    decision = input("¿Qué haces? (ir al norte / ir al este / abrir cofre): ").lower()
-
+# game_logic.py
+def logica_salon_principal(estado, decision):
+    estado_nuevo = estado.copy()
     if decision == "ir al norte":
-        habitacion_actual = "biblioteca"
+        estado_nuevo["habitacion_actual"] = "biblioteca"
     elif decision == "ir al este":
-        print("La puerta del este está cerrada. ¡Qué lástima! Vuelves al salón.")
+        # Nota: La salida de texto debe manejarse fuera de la lógica de prueba
+        pass
     elif decision == "abrir cofre":
-        print("Abres el cofre y encuentras un mapa polvoriento que indica el camino. ¡No hay nada más de valor!")
-        print("Vuelves a mirar las puertas.")
-    else:
-        print("Acción no válida.")
+        pass
+    return estado_nuevo
 
-
-def logica_biblioteca():
-    """Maneja la lógica de la habitación 'biblioteca'."""
-    global habitacion_actual, juego_terminado
-    print(
-        "La puerta se cierra detrás de ti. Estás en una antigua biblioteca. Hay estanterías llenas de libros y una puerta de roble al fondo, bloqueada por una runa mágica.")
-    print("La runa tiene un grabado: 'La primera luz antes del día. ¿Quién soy yo?'.")
-    decision = input("¿Qué palabra dices para abrir la puerta?: ").lower()
-
+def logica_biblioteca(estado, decision):
+    estado_nuevo = estado.copy()
     if decision == "sol":
-        print("¡La runa brilla y la puerta de roble se abre lentamente!")
-        habitacion_actual = "estudio del hechicero"
+        estado_nuevo["habitacion_actual"] = "estudio del hechicero"
     else:
-        print("Una nube de humo te envuelve y te sientes débil. Has perdido el juego.")
-        juego_terminado = True
+        estado_nuevo["juego_terminado"] = True
+    return estado_nuevo
 
+def logica_estudio(estado, decision):
+    estado_nuevo = estado.copy()
+    estado_nuevo["tiene_collar"] = True
+    estado_nuevo["juego_terminado"] = True
+    return estado_nuevo
 
-def logica_estudio():
-    """Maneja la lógica de la habitación 'estudio del hechicero'."""
-    global tiene_collar, juego_terminado
-    print(
-        "Entras en un estudio lleno de pociones y artefactos mágicos. Sobre un pedestal, brilla el Collar de la Verdad.")
-    print(
-        "Te acercas al pedestal y tomas el collar. De repente, todo el estudio se desvanece y la luz del sol te ciega.")
-    tiene_collar = True
-    juego_terminado = True
+if __name__ == "__main__":
+    estado = {
+        "habitacion_actual": "salon_principal",
+        "tiene_collar": False,
+        "juego_terminado": False
+    }
 
+    print("¡Bienvenido a la Aventura de Texto!")
+    print("Estás en el salón principal de un castillo antiguo.")
 
-while not juego_terminado:
-    print("\n--- Estás en el " + habitacion_actual.upper() + " ---")
+    while not estado["juego_terminado"]:
+        if estado["habitacion_actual"] == "salon_principal":
+            print("Puedes ir al norte a la biblioteca, al este a un pasillo oscuro, o abrir un cofre.")
+            decision = input("¿Qué quieres hacer? (ir al norte/ir al este/abrir cofre): ").strip().lower()
+            estado = logica_salon_principal(estado, decision)
 
-    if habitacion_actual in habitaciones:
-        eval(f"{habitaciones[habitacion_actual]}()")
+        elif estado["habitacion_actual"] == "biblioteca":
+            print("Estás en la biblioteca. Hay un libro brillante en una mesa.")
+            decision = input("¿Qué palabra dices? (sol/luna): ").strip().lower()
+            estado = logica_biblioteca(estado, decision)
+
+        elif estado["habitacion_actual"] == "estudio del hechicero":
+            print("Has entrado en el estudio del hechicero y encontrado un collar mágico.")
+            estado = logica_estudio(estado, None)
+
+    if estado["tiene_collar"]:
+        print("¡Felicidades! Has encontrado el collar mágico y ganado el juego.")
     else:
-        print("¡Error! Habitación no reconocida. El juego termina.")
-        juego_terminado = True
-
-print("\n--- FIN DEL JUEGO ---")
-if tiene_collar:
-    print("¡Felicidades! Has encontrado el Collar de la Verdad y has escapado de la mansión. ¡Has ganado!")
-else:
-    print("¡Has perdido el juego! La oscuridad te consume. Inténtalo de nuevo.")
+        print("Has sido atrapado por una trampa. ¡Juego terminado!")

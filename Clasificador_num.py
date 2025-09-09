@@ -1,12 +1,21 @@
-def n_usuario(num):
-    """Función para clasificar un número ingresado por el usuario como par o impar."""
+def clasificar_numero(num):
+    """
+    Clasifica un número como 'Par', 'Impar', o 'Múltiplo de 5'.
 
+    Args:
+        num (int): El número a clasificar.
 
-    rta = "Par" if num % 2 == 0 else "Impar"
-    print(f"El número es {rta}")
+    Returns:
+        str: Una cadena de texto con la clasificación del número.
+    """
     if num % 5 == 0:
-        print("y además es múltiplo de 5")
-
+        return f"El número es par y además es múltiplo de 5" if num % 2 == 0 else f"El número es impar y además es múltiplo de 5"
+    else:
+        return f"El número es par" if num % 2 == 0 else f"El número es impar"
 
 if __name__ == "__main__":
-    n_usuario(num = int(input("Ingrese un número: ")))
+    try:
+        num = int(input("Ingrese un número: "))
+        print(clasificar_numero(num))
+    except ValueError:
+        print("Entrada inválida. Por favor, ingrese un número entero.")

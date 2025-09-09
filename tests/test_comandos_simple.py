@@ -1,25 +1,25 @@
 import pytest
-from Comandos_simple import interprete
+from Comandos_simple import interpretar_comando, es_comando_de_salida
 
-@pytest.mark.parametrize("input_values, expected_output", [
-    (["1", "3"], "Guardando..."),
-    (["2", "3"], "Cargando..."),
-    (["3"], "Saliendo..."),
-    (["4", "3"], "Opción no válida, intente de nuevo."),
-])
-def test_interprete(capsys, monkeypatch, input_values, expected_output):
-    """
-    Prueba la función interprete con diferentes entradas y verifica la salida.
-    """
-    # Configurar el valor de entrada simulado para que se consuma secuencialmente.
-    # El iterador asegura que cada llamada a `input()` obtenga un valor de la lista.
-    monkeypatch.setattr('builtins.input', lambda _: input_values.pop(0))
+def test_guardar_comando():
+    """Prueba que el comando 1 devuelve el mensaje correcto."""
+    assert interpretar_comando(1) == "Guardando..."
 
-    # Ejecutar la función
-    interprete()
+def test_cargar_comando():
+    """Prueba que el comando 2 devuelve el mensaje correcto."""
+    assert interpretar_comando(2) == "Cargando..."
 
-    # Capturar la salida de la consola
-    captured = capsys.readouterr()
+def test_salir_comando():
+    """Prueba que el comando 3 devuelve el mensaje correcto."""
+    assert interpretar_comando(3) == "Saliendo..."
 
-    # Verificar que la salida contiene el mensaje esperado
-    assert expected_output in captured.out
+def test_opcion_no_valida():
+    """Prueba que una opción inválida devuelve el mensaje de error."""
+    assert interpretar_comando(4) == "Opción no válida, intente de nuevo."
+    assert interpretar_comando(0) == "Opción no válida, intente de nuevo."
+
+def test_es_comando_de_salida():
+    """Prueba que la función es_comando_de_salida funciona correctamente."""
+    assert es_comando_de_salida(3) is True
+    assert es_comando_de_salida(1) is False
+    assert es_comando_de_salida(2) is False

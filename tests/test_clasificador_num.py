@@ -1,16 +1,22 @@
 import pytest
-from Clasificador_num import n_usuario
+from Clasificador_num import clasificar_numero
 
-def test_n_usuario(capsys):
-    """Prueba la función n_usuario con varios casos de prueba."""
-    test_cases = [
-        (4, "El número es Par\n"),
-        (7, "El número es Impar\n"),
-        (10, "El número es Par\ny además es múltiplo de 5\n"),
-        (15, "El número es Impar\ny además es múltiplo de 5\n")
-    ]
+def test_par():
+    """Prueba un número par que no es múltiplo de 5."""
+    assert clasificar_numero(2) == "El número es par"
 
-    for num, expected_output in test_cases:
-        n_usuario(num)
-        captured = capsys.readouterr()
-        assert captured.out == expected_output
+def test_impar():
+    """Prueba un número impar que no es múltiplo de 5."""
+    assert clasificar_numero(3) == "El número es impar"
+
+def test_multiplo_de_5_par():
+    """Prueba un número que es par y múltiplo de 5."""
+    assert clasificar_numero(10) == "El número es par y además es múltiplo de 5"
+
+def test_multiplo_de_5_impar():
+    """Prueba un número que es impar y múltiplo de 5."""
+    assert clasificar_numero(25) == "El número es impar y además es múltiplo de 5"
+
+def test_cero():
+    """Prueba el número 0, que es par y múltiplo de 5."""
+    assert clasificar_numero(0) == "El número es par y además es múltiplo de 5"

@@ -1,47 +1,87 @@
 import random
-def Ahorcados():
-    """Juego del Ahorcado donde el jugador debe adivinar una palabra letra por letra.
-    :arg:
-    palabras (list): Lista de palabras posibles.
-    palabra (str): Palabra seleccionada aleatoriamente.
-    :return
-    Mensaje indicando si el jugador ganó o perdió."""
 
-    palabras = ['python', 'java', 'kotlin', 'javascript']
+
+def inicializar_juego(palabras):
+    """
+    Selecciona una palabra aleatoria y la inicializa para el juego.
+
+    Args:
+        palabras (list): Una lista de palabras posibles para el juego.
+
+    Returns:
+        tuple: Una tupla que contiene la palabra seleccionada y una lista
+               de guiones que representan la palabra oculta.
+    """
     palabra = random.choice(palabras)
-    letras_adivinadas = set()
+    palabra_oculta = ['-' for _ in palabra]
+    return palabra, palabra_oculta
+
+
+def adivinar_letra(palabra, palabra_oculta, letra, intentos):
+    """
+    Procesa una letra adivinada y actualiza el estado del juego.
+
+    Args:
+        palabra (str): La palabra a adivinar.
+        palabra_oculta (list): La representación actual de la palabra oculta.
+        letra (str): La letra adivinada por el jugador.
+        intentos (int): El número de intentos restantes.
+
+    Returns:
+        tuple: Una tupla con la palabra oculta actualizada y el nuevo
+               número de intentos.
+    """
+    if letra in palabra:
+        for i, char in enumerate(palabra):
+            if char == letra:
+                palabra_oculta[i] = letra
+    else:
+        intentos -= 1
+
+    return palabra_oculta, intentos
+
+
+def verificar_estado_juego(palabra_oculta, intentos):
+    """
+    Verifica si el juego ha terminado y si el jugador ganó o perdió.
+
+    Args:
+        palabra_oculta (list): La representación actual de la palabra oculta.
+        intentos (int): El número de intentos restantes.
+
+    Returns:
+        str: "Ganado" si el jugador ganó, "Perdido" si perdió, o None si el
+             juego continúa.
+    """
+    if '-' not in palabra_oculta:
+        return "Ganado"
+    elif intentos <= 0:
+        return "Perdido"
+    else:
+        return None
+
+if __name__ == "__main__":
+    palabras = ["python", "java", "kotlin", "javascript"]
+    palabra, palabra_oculta = inicializar_juego(palabras)
     intentos = 6
-    palabra_oculta = ['-' for i in palabra]
 
     print("¡Bienvenido al juego del Ahorcado!")
 
-    while intentos > 0 and '-' in palabra_oculta:
-        print("\n" + ''.join(palabra_oculta))
-        print(f"Tienes {intentos} intentos restantes.")
+    while True:
+        print("\nPalabra:", ' '.join(palabra_oculta))
+        print("Intentos restantes:", intentos)
         letra = input("Adivina una letra: ").lower()
 
         if len(letra) != 1 or not letra.isalpha():
-            print("Por favor, ingresa una sola letra.")
-            continue
-        if letra in letras_adivinadas:
-            print("Ya has adivinado esa letra. Intenta con otra.")
+            print("Por favor, ingresa una sola letra válida.")
             continue
 
-        letras_adivinadas.add(letra)
+        palabra_oculta, intentos = adivinar_letra(palabra, palabra_oculta, letra, intentos)
+        estado = verificar_estado_juego(palabra_oculta, intentos)
 
-        if letra in palabra:
-            for alo, char in enumerate(palabra):
-                if char == letra:
-                    palabra_oculta[alo] = letra
-            print("¡Bien hecho! Has adivinado una letra.")
-        else:
-            intentos -= 1
-            print("Letra incorrecta.")
-
-    if '-' not in palabra_oculta:
-        print(f"\n¡Felicidades! Has adivinado la palabra: {palabra}")
-    else:
-        print(f"\nHas perdido. La palabra era: {palabra}")
-
-if __name__ == "__main__":
-    Ahorcados()
+        if estado == "Ganado":
+            print("\n¡Felicidades! Has adivinado la palabra:", palabra)
+            break
+        elif estado == "Perdido":
+            print("\nLo siento, has perdido. La palabra era:", palabra)
+            break

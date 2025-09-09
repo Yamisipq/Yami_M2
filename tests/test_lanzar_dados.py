@@ -1,52 +1,45 @@
 import pytest
 from Lanzar_dados import simulador_lanzamiento
+import random
 
-
-# Corregimos el fixture para que sea más simple
+# Fixture para simular el comportamiento de random.randint
 @pytest.fixture
-def mock_random_randint(monkeypatch):
+def mock_random(monkeypatch):
     """
-    Simula una secuencia predecible de lanzamientos de dados.
-    Devuelve 1 y 2 repetidamente.
+    Simula random.randint para devolver una secuencia fija de valores,
+    haciendo que los resultados de la simulación sean predecibles.
     """
-    # Usamos una lista para la secuencia de valores
-    lanzamientos = [1, 2, 1, 2] * 5000  # 10,000 lanzamientos
+    valores = [1, 2, 3, 4, 5, 6]
+    def mock_randint(a, b):
+        return valores.pop(0)
 
-    # Esta función sobrescribe a random.randint
-    def fake_randint(a, b):
-        return lanzamientos.pop(0)
+    monkeypatch.setattr(random, "randint", mock_randint)
 
-    # Reemplazamos random.randint con nuestra función simulada
-    monkeypatch.setattr("Lanzar_dados.random.randint", fake_randint)
+def test_suma_frecuencias_es_correcta():
+    """Verifica que la suma de las frecuencias sea igual al número de lanzamientos."""
+    num_lanzamientos = 5000
+    resultados = simulador_lanzamiento(num_lanzamientos)
+    assert sum(resultados.values()) == num_lanzamientos
 
+def test_estructura_del_diccionario():
+    """Verifica que el diccionario de resultados tiene las claves correctas (2-12)."""
+    resultados = simulador_lanzamiento(100)
+    assert len(resultados) == 11
+    assert all(suma in resultados for suma in range(2, 13))
 
-def test_simulador_lanzamiento(capsys, mock_random_randint):
+def test_lanzamientos_cero():
+    """Prueba el caso borde de 0 lanzamientos."""
+    resultados = simulador_lanzamiento(0)
+    assert sum(resultados.values()) == 0
+    assert all(freq == 0 for freq in resultados.values())
+
+def test_comportamiento_deterministico(mock_random):
     """
-    Prueba que el simulador calcula y reporta las frecuencias correctamente
-    con un comportamiento de dados predecible.
+    Prueba que la función se comporta como se espera con valores conocidos.
+    Con el mock, los dados siempre darán 1, 2, 3, 4, 5, 6 en ese orden.
     """
-    # Llama a la función que vamos a probar
-    simulador_lanzamiento()
-
-    # Captura la salida de la consola
-    captured = capsys.readouterr()
-
-    # La suma de los dados siempre será 3 (1+2)
-    # Por lo tanto, se espera que la frecuencia de 3 sea 10,000
-    expected_output = (
-        "Reporte de frecuencias de las sumas de dos dados:\n"
-        "Suma 2: 0 veces\n"
-        "Suma 3: 10000 veces\n"
-        "Suma 4: 0 veces\n"
-        "Suma 5: 0 veces\n"
-        "Suma 6: 0 veces\n"
-        "Suma 7: 0 veces\n"
-        "Suma 8: 0 veces\n"
-        "Suma 9: 0 veces\n"
-        "Suma 10: 0 veces\n"
-        "Suma 11: 0 veces\n"
-        "Suma 12: 0 veces\n"
-    )
-
-    # Compara la salida capturada con el resultado esperado
-    assert captured.out == expected_output
+    resultados = simulador_lanzamiento(3)
+    assert resultados[3] == 1
+    assert resultados[7] == 1
+    assert resultados[11] == 1
+    assert sum(resultados.values()) == 3

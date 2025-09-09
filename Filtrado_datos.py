@@ -1,16 +1,31 @@
-def list(numeros=None):
+def filtrar_positivos(numeros):
     """
-    Demuestra el uso de list comprehensions para filtrar datos.
+    Filtra y devuelve solo los números positivos de una lista.
     """
+    return [num for num in numeros if num > 0]
 
-    # Filtrar números pares usando list comprehension
-    posi = [num for num in numeros if num > 0]
-    cuadrados = [num ** 2 for num in numeros]
-    clasificacion = ["positivo" if num > 0 else "negativo" for num in numeros]
 
-    print("Números positivos:", posi)
-    print("Cuadrados de los números:", cuadrados)
-    print("Clasificación de números:", clasificacion)
+def calcular_cuadrados(numeros):
+    """
+    Calcula y devuelve el cuadrado de cada número en una lista.
+    """
+    return [num ** 2 for num in numeros]
+
+
+def clasificar_numeros(numeros):
+    """
+    Clasifica cada número de una lista como 'positivo' o 'negativo'.
+    """
+    return ["positivo" if num > 0 else "negativo" for num in numeros]
+
 
 if __name__ == "__main__":
-    list(numeros = [-5, 10, -15, 20, -25, 30])
+    numeros_ejemplo = [-5, 10, -15, 20, -25, 30]
+
+    positivos = filtrar_positivos(numeros_ejemplo)
+    cuadrados = calcular_cuadrados(numeros_ejemplo)
+    clasificacion = clasificar_numeros(numeros_ejemplo)
+
+    print("Números positivos:", positivos)
+    print("Cuadrados de los números:", cuadrados)
+    print("Clasificación de números:", clasificacion)

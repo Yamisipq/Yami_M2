@@ -1,80 +1,83 @@
 import pytest
-import Ahorcado
+from Ahorcado import inicializar_juego, adivinar_letra, verificar_estado_juego
 
 
-@pytest.fixture
-def monkeypatch_for_test(monkeypatch):
+# Usamos monkeypatch para "mockear" la elección aleatoria de la palabra
+def test_inicializar_juego_con_mock(monkeypatch):
     """
-    Fixture que proporciona monkeypatch para simular entrada de usuario y palabra.
+    Verifica que la función inicialice el juego con una palabra específica.
     """
-    # Esta es una función de entrada de usuario que se irá consumiendo.
-    inputs = []
+    palabras = ['manzana', 'platano', 'uva']
 
-    def mock_input(prompt):
-        return inputs.pop(0)
+    # Hacemos que random.choice siempre elija 'manzana'
+    monkeypatch.setattr('random.choice', lambda x: 'manzana')
 
-    def set_inputs(new_inputs):
-        nonlocal inputs
-        inputs = new_inputs
-
-    # Simular random.choice para elegir siempre una palabra específica
-    def mock_random_choice(choices):
-        return "python"
-
-    monkeypatch.setattr('builtins.input', mock_input)
-    monkeypatch.setattr('random.choice', mock_random_choice)
-
-    # Devolver la función para que las pruebas puedan configurar sus entradas
-    return set_inputs
+    palabra, palabra_oculta = inicializar_juego(palabras)
+    assert palabra == 'manzana'
+    assert palabra_oculta == ['-', '-', '-', '-', '-', '-', '-']
 
 
-def test_victoria(capsys, monkeypatch_for_test):
+def test_adivinar_letra_correcta():
     """
-    Prueba el escenario donde el jugador gana el juego.
+    Verifica que una letra correcta se muestre en la palabra oculta.
     """
-    # Establecer la secuencia de entradas para el test de victoria
-    monkeypatch_for_test(['p', 'y', 't', 'h', 'o', 'n'])
+    palabra = 'python'
+    palabra_oculta = ['-', '-', '-', '-', '-', '-']
+    letra = 'p'
+    intentos = 6
 
-    # Ejecutar la función
-    Ahorcado.Ahorcados()
+    nueva_palabra, nuevos_intentos = adivinar_letra(palabra, palabra_oculta, letra, intentos)
 
-    # Capturar la salida de la consola
-    captured = capsys.readouterr()
-
-    # Asegurar que el mensaje de victoria está en la salida
-    assert "¡Felicidades! Has adivinado la palabra: python" in captured.out
+    assert nueva_palabra == ['p', '-', '-', '-', '-', '-']
+    assert nuevos_intentos == 6
 
 
-def test_derrota_por_intentos(capsys, monkeypatch_for_test):
+def test_adivinar_letra_incorrecta():
     """
-    Prueba el escenario donde el jugador pierde el juego por agotar intentos.
+    Verifica que un intento se reste cuando la letra es incorrecta.
     """
-    # Establecer la secuencia de entradas para el test de derrota
-    # (6 intentos, la 7ma letra incorrecta causa la derrota)
-    monkeypatch_for_test(['a', 'b', 'c', 'd', 'e', 'f', 'g'])
+    palabra = 'python'
+    palabra_oculta = ['-', '-', '-', '-', '-', '-']
+    letra = 'z'
+    intentos = 6
 
-    # Ejecutar la función
-    Ahorcado.Ahorcados()
+    nueva_palabra, nuevos_intentos = adivinar_letra(palabra, palabra_oculta, letra, intentos)
 
-    # Capturar la salida de la consola
-    captured = capsys.readouterr()
-
-    # Asegurar que el mensaje de derrota está en la salida
-    assert "Has perdido. La palabra era: python" in captured.out
+    assert nueva_palabra == ['-', '-', '-', '-', '-', '-']
+    assert nuevos_intentos == 5
 
 
-def test_letras_repetidas(capsys, monkeypatch_for_test):
+def test_juego_ganado():
     """
-    Prueba que el juego maneje correctamente las letras repetidas.
+    Verifica que la función reporte 'Ganado' cuando la palabra está completa.
     """
-    # Establecer una secuencia de entradas que incluye una letra repetida
-    monkeypatch_for_test(['p', 'p', 'y', 't', 'h', 'o', 'n'])
+    palabra_completa = ['p', 'y', 't', 'h', 'o', 'n']
+    intentos = 4
 
-    # Ejecutar la función
-    Ahorcado.Ahorcados()
+    estado = verificar_estado_juego(palabra_completa, intentos)
 
-    # Capturar la salida
-    captured = capsys.readouterr()
+    assert estado == 'Ganado'
 
-    # Asegurar que el mensaje de letra repetida está en la salida
-    assert "Ya has adivinado esa letra. Intenta con otra." in captured.out
+
+def test_juego_perdido():
+    """
+    Verifica que la función reporte 'Perdido' cuando no quedan intentos.
+    """
+    palabra_oculta = ['-', '-', '-', '-', '-', '-']
+    intentos = 0
+
+    estado = verificar_estado_juego(palabra_oculta, intentos)
+
+    assert estado == 'Perdido'
+
+
+def test_juego_en_progreso():
+    """
+    Verifica que la función no retorne nada cuando el juego aún no termina.
+    """
+    palabra_parcial = ['p', '-', '-', '-', '-', '-']
+    intentos = 2
+
+    estado = verificar_estado_juego(palabra_parcial, intentos)
+
+    assert estado is None

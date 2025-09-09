@@ -19,12 +19,6 @@ def calcular_precio_final(precio_base: float, es_estudiante: bool) -> float:
     """
     Calcula el precio final de la entrada aplicando el descuento de estudiante.
 
-    Args:
-        precio_base (float): El precio base de la entrada.
-        es_estudiante (bool): True si el cliente es estudiante, False si no lo es.
-
-    Returns:
-        float: El precio final de la entrada con el descuento aplicado.
     """
     if es_estudiante:
         descuento = precio_base * 0.10

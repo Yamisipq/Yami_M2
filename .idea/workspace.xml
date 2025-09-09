@@ -5,15 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5969a0eb-8b34-4c50-a0af-3e574fd8f08b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ahorcado.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ahorcado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aventura.py" beforeDir="false" afterPath="$PROJECT_DIR$/Aventura.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clasificador_num.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clasificador_num.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comandos_simple.py" beforeDir="false" afterPath="$PROJECT_DIR$/Comandos_simple.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Filtrado_datos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Filtrado_datos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lanzar_dados.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lanzar_dados.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Validar_cc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Validar_cc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Naval.py" beforeDir="false" afterPath="$PROJECT_DIR$/Naval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Posiciones_enum.py" beforeDir="false" afterPath="$PROJECT_DIR$/Posiciones_enum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sis_Cine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sis_Cine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transformacion_datos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transformacion_datos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transposicion_matriz.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transposicion_matriz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Val_contra.py" beforeDir="false" afterPath="$PROJECT_DIR$/Val_contra.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_ahorcado.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ahorcado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_aventura.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_aventura.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_clasificador_num.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_clasificador_num.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_comandos_simple.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_comandos_simple.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_filtrado_datos.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_filtrado_datos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_lanzar_dados.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_lanzar_dados.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_rock_paper_sccisors.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_rock_paper_sccisors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_matriz.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_matriz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_naval.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_naval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_posiciones_enum.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_posiciones_enum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_sis_cine.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_sis_cine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_transformación_datos.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_transformación_datos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_validar_cc.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_validar_cc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_val_contra.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_val_contra.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +52,12 @@
     &quot;assignee&quot;: &quot;Yamisipq&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Yamisipq/Yami_M2.git",
-    "accountId": "6dfd3615-3388-45f7-88a7-66d6f57fe926"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Yamisipq/Yami_M2.git&quot;,
+    &quot;accountId&quot;: &quot;1ace5eca-c289-4002-9ccf-5025a8b131c7&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -53,44 +69,41 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for test_filtrado_datos.test_list.test_list_with_empty_list.executor": "Run",
-    "Python tests.Python tests for tests.test_ahorcado.test_derrota_por_intentos.executor": "Run",
-    "Python tests.Python tests for tests.test_ahorcado.test_victoria.executor": "Run",
-    "Python tests.Python tests for tests.test_filtrado_datos.test_list.executor": "Run",
-    "Python tests.Python tests for tests.test_filtrado_datos.test_list_function_with_example_data.executor": "Run",
-    "Python tests.Python tests for tests.test_lanzar_dados.test_simulador_lanzamiento.executor": "Run",
-    "Python tests.Python tests for tests.test_sis_cine.test_obtener_precio_base.executor": "Run",
-    "Python tests.Python tests for tests.test_transformación_datos.test_estructura.executor": "Run",
-    "Python tests.Python tests for tests.test_transformación_datos.test_precio_con_iva.executor": "Run",
-    "Python tests.Python tests for tests.test_transformación_datos.test_transformacion_precios_con_iva.executor": "Run",
-    "Python tests.Python tests for tests.test_validar_cc.test_cedula_invalida_caracteres_no_numericos.executor": "Run",
-    "Python tests.Python tests for tests.test_validar_cc.test_cedula_valida.executor": "Run",
-    "Python tests.Python tests for tests.test_validar_cc.test_cedula_valida_suma_par.executor": "Run",
-    "Python tests.Python tests for tests.test_validar_cc.test_validar_cc.executor": "Run",
+    "Python tests.Python tests for test_combinador_listas_zip.test_unir_listas.executor": "Run",
+    "Python tests.Python tests for test_matriz.test_matriz.executor": "Run",
+    "Python tests.Python tests for test_matriz.test_matriz_vacia.executor": "Run",
+    "Python tests.Python tests for test_naval.test_convertir_coordenada_valida.executor": "Run",
+    "Python tests.Python tests for test_posiciones_enum.test_encontrar_indices.executor": "Run",
+    "Python tests.Python tests for test_sis_cine.test_gestionar_compra_entradas_estudiante.executor": "Run",
+    "Python tests.Python tests for test_val_contra.test_contrasena_sin_numero.executor": "Run",
     "Python tests.Python tests in test_ahorcado.py.executor": "Run",
+    "Python tests.Python tests in test_aventura.py.executor": "Run",
     "Python tests.Python tests in test_clasificador_num.py.executor": "Run",
     "Python tests.Python tests in test_comandos_simple.py.executor": "Run",
     "Python tests.Python tests in test_filtrado_datos.py.executor": "Run",
+    "Python tests.Python tests in test_lanzar_dados.py.executor": "Run",
+    "Python tests.Python tests in test_naval.py.executor": "Run",
     "Python tests.Python tests in test_posiciones_enum.py.executor": "Run",
     "Python tests.Python tests in test_rock_paper_sccisors.py.executor": "Run",
     "Python tests.Python tests in test_sis_cine.py.executor": "Run",
+    "Python tests.Python tests in test_transformación_datos.py.executor": "Run",
     "Python tests.Python tests in test_val_contra.py.executor": "Run",
-    "Python tests.Python tests in test_validar_cc.py.executor": "Run",
     "Python.Ahorcado.executor": "Run",
     "Python.Clasificador_num.executor": "Run",
+    "Python.Combinador_de_listas_con_zip.executor": "Run",
     "Python.Filtrado_datos.executor": "Run",
     "Python.Lanzar_dados.executor": "Run",
+    "Python.Naval.executor": "Run",
     "Python.Posiciones_enum.executor": "Run",
     "Python.Rock_paper_scissors.executor": "Run",
     "Python.Sis_Cine.executor": "Run",
     "Python.Transformacion_datos.executor": "Run",
-    "Python.Validar_cc.executor": "Run",
+    "Python.Transposicion_matriz.executor": "Run",
+    "Python.Val_contra.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "to.speed.mode.migration.done": "true"
   }
@@ -100,8 +113,8 @@
       <recent name="C:\Users\rosas\OneDrive\Escritorio\Yami_M2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.test_lanzar_dados.test_simulador_lanzamiento">
-    <configuration name="Validar_cc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_val_contra.test_contrasena_sin_numero">
+    <configuration name="Transformacion_datos" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Yami_M2" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -114,7 +127,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Validar_cc.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Transformacion_datos.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -123,80 +136,87 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_lanzar_dados.test_simulador_lanzamiento" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Val_contra" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Yami_M2" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Val_contra.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_val_contra.test_contrasena_sin_numero" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Yami_M2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_lanzar_dados.test_simulador_lanzamiento&quot;" />
+      <option name="_new_target" value="&quot;test_val_contra.test_contrasena_sin_numero&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_validar_cc.test_cedula_invalida_caracteres_no_numericos" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_rock_paper_sccisors.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Yami_M2" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_validar_cc.test_cedula_invalida_caracteres_no_numericos&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_rock_paper_sccisors.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_validar_cc.test_cedula_valida" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_transformación_datos.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Yami_M2" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_validar_cc.test_cedula_valida&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_validar_cc.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Yami_M2" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_validar_cc.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_transformación_datos.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for tests.test_lanzar_dados.test_simulador_lanzamiento" />
-        <item itemvalue="Python tests.Python tests for tests.test_validar_cc.test_cedula_invalida_caracteres_no_numericos" />
-        <item itemvalue="Python tests.Python tests in test_validar_cc.py" />
-        <item itemvalue="Python.Validar_cc" />
-        <item itemvalue="Python tests.Python tests for tests.test_validar_cc.test_cedula_valida" />
+        <item itemvalue="Python tests.Python tests for test_val_contra.test_contrasena_sin_numero" />
+        <item itemvalue="Python.Val_contra" />
+        <item itemvalue="Python tests.Python tests in test_transformación_datos.py" />
+        <item itemvalue="Python.Transformacion_datos" />
+        <item itemvalue="Python tests.Python tests in test_rock_paper_sccisors.py" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-b3ae9b5d7125-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.439" />
+        <option value="bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90" />
       </set>
     </attachedChunks>
   </component>
@@ -209,5 +229,16 @@
       <updated>1757281052036</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,12 +1,12 @@
-def transformacion_datos(resultado):
-    """
-    Demuestra el uso de list comprehensions para transformar datos en una lista de diccionarios
+def aplicar_iva(productos):
 
-    """
-    resultado = [{"nombre": "Camisa", "precio": 50000}, {"nombre": "Pantalón", "precio": 80000}]
+    return [{"nombre": item["nombre"], "precio": item["precio"] * 1.19} for item in productos]
 
-    trans=[{"nombre": item["nombre"], "precio": (item["precio"] * 0.19)+item["precio"]} for item in resultado]
-    print(trans)
 
 if __name__ == "__main__":
-    transformacion_datos([])
+    # La demostración de uso se separa de la lógica principal
+    productos_originales = [{"nombre": "Camisa", "precio": 50000}, {"nombre": "Pantalón", "precio": 80000}]
+    productos_con_iva = aplicar_iva(productos_originales)
+
+    print("Productos originales:", productos_originales)
+    print("Productos con IVA:", productos_con_iva)

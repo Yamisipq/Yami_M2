@@ -16,6 +16,7 @@ def encontrar_indices(frase, letra):
             indices.append(i)
     return indices
 
+
 def main():
     """
     Función principal para la interacción con el usuario.
@@ -24,6 +25,7 @@ def main():
     letra = input("Introduce una letra: ").lower()
     posiciones = encontrar_indices(frase, letra)
     print(f"Los índices de la letra '{letra}' en la frase '{frase}' son: {posiciones}")
+
 
 if __name__ == "__main__":
     main()
