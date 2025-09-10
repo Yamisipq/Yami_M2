@@ -68,7 +68,7 @@ if __name__ == "__main__":
     print("¡Bienvenido al juego del Ahorcado!")
 
     while True:
-        print("\nPalabra:", ' '.join(palabra_oculta))
+        print("\nPalabra:",' '.join(palabra_oculta))
         print("Intentos restantes:", intentos)
         letra = input("Adivina una letra: ").lower()
 

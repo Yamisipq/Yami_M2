@@ -1,5 +1,3 @@
-# test_data_processor.py
-
 import pytest
 from Filtrado_datos import filtrar_positivos, calcular_cuadrados, clasificar_numeros
 

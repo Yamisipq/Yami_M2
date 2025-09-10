@@ -2,7 +2,6 @@ import pytest
 from Lanzar_dados import simulador_lanzamiento
 import random
 
-# Fixture para simular el comportamiento de random.randint
 @pytest.fixture
 def mock_random(monkeypatch):
     """

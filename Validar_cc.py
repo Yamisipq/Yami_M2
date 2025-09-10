@@ -5,8 +5,6 @@ def validar_cedula(cedula):
     if not isinstance(cedula, str) or not cedula.isdigit():
         return False, "Error: La cédula debe contener solo números."
 
-    # La validación de la suma es incorrecta para la longitud.
-    # Se corrige para validar directamente la longitud de la cadena.
     if len(cedula) != 10:
         return False, "Error: La cédula debe tener 10 números."
 

@@ -1,8 +1,6 @@
-# test_game.py
-
+import pytest
 from Aventura import logica_salon_principal, logica_biblioteca, logica_estudio
 
-# Estado inicial para todas las pruebas
 ESTADO_INICIAL = {
     "habitacion_actual": "salón principal",
     "tiene_collar": False,

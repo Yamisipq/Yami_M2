@@ -1,11 +1,7 @@
-# Archivo: test_cine.py
-
 import pytest
 from unittest.mock import patch
 from Sis_Cine import obtener_precio_base, calcular_precio_final, gestionar_compra_entradas
 
-# --- Pruebas para obtener_precio_base ---
-# Esta función es "pura" y no interactúa con el usuario, por lo que es fácil de probar.
 def test_precio_ninos():
     assert obtener_precio_base(10) == 10000.0
 
@@ -15,15 +11,12 @@ def test_precio_adolescentes():
 def test_precio_adultos():
     assert obtener_precio_base(30) == 20000.0
 
-# Prueba de "valores límite" (Boundary Value Analysis)
 def test_precio_limites():
     assert obtener_precio_base(12) == 10000.0  # Límite superior para niños
     assert obtener_precio_base(13) == 15000.0  # Límite inferior para adolescentes
     assert obtener_precio_base(17) == 15000.0  # Límite superior para adolescentes
     assert obtener_precio_base(18) == 20000.0  # Límite inferior para adultos
 
-# --- Pruebas para calcular_precio_final ---
-# Usamos pytest.mark.parametrize para probar múltiples casos de forma concisa.
 @pytest.mark.parametrize("precio_base, es_estudiante, precio_esperado", [
     (20000.0, True, 18000.0),  # Estudiante con descuento
     (20000.0, False, 20000.0), # No estudiante, sin descuento
@@ -39,8 +32,6 @@ def test_calcular_precio_final(precio_base, es_estudiante, precio_esperado, caps
         captured = capsys.readouterr()
         assert "Tienes un descuento de" in captured.out
 
-# --- Pruebas para gestionar_compra_entradas (Mocking) ---
-# Esta es la parte más compleja porque simula la entrada del usuario.
 # Usamos @patch para "falsificar" la función input().
 @patch('builtins.input', side_effect=['25', 's'])
 def test_gestionar_compra_entradas_estudiante(mock_input, capsys):

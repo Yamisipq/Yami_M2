@@ -2,7 +2,6 @@ import pytest
 from Ahorcado import inicializar_juego, adivinar_letra, verificar_estado_juego
 
 
-# Usamos monkeypatch para "mockear" la elección aleatoria de la palabra
 def test_inicializar_juego_con_mock(monkeypatch):
     """
     Verifica que la función inicialice el juego con una palabra específica.

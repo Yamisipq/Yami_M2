@@ -1,7 +1,4 @@
-# Módulo de prueba: test_cedula.py
-
 import pytest
-# Importa la función del archivo donde la guardaste
 from Validar_cc import validar_cedula
 
 def test_cedula_valida_suma_par():

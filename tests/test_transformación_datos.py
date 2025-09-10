@@ -1,5 +1,3 @@
-# test_transformacion.py
-
 import pytest
 from Transformacion_datos import aplicar_iva
 

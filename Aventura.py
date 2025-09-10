@@ -1,10 +1,8 @@
-# game_logic.py
 def logica_salon_principal(estado, decision):
     estado_nuevo = estado.copy()
     if decision == "ir al norte":
         estado_nuevo["habitacion_actual"] = "biblioteca"
     elif decision == "ir al este":
-        # Nota: La salida de texto debe manejarse fuera de la lógica de prueba
         pass
     elif decision == "abrir cofre":
         pass
@@ -31,7 +29,7 @@ if __name__ == "__main__":
         "juego_terminado": False
     }
 
-    print("¡Bienvenido a la Aventura de Texto!")
+    print("¡Bienvenido a la Aventura!")
     print("Estás en el salón principal de un castillo antiguo.")
 
     while not estado["juego_terminado"]:

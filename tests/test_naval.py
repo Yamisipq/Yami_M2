@@ -3,7 +3,6 @@ import random
 from Naval import crear_estado_inicial, disparar, esta_terminado, ha_ganado, convertir_coordenada
 
 
-# Fixture para simular la aleatoriedad y hacer las pruebas deterministas
 @pytest.fixture
 def estado_fijo(monkeypatch):
     """
@@ -71,8 +70,8 @@ def test_ganar_el_juego(estado_fijo):
 @pytest.fixture
 def estado_fijo(monkeypatch):
     """
-    Mocks random to position the ship in a fixed location.
-    The ship will be at coordinates (0, 0), (0, 1), (0, 2).
+    Coordina la orientación que tendra el barco, en horizontal
+     así: (0, 0), (0, 1), (0, 2).
     """
 
     def mock_choice(seq):
